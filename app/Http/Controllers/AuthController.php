@@ -34,7 +34,7 @@ class AuthController extends Controller
         ];
 
         if (Auth::attempt($credetials)) {
-            return redirect('/')->with('success', 'Login berhasil');
+            return redirect('/home')->with('success', 'Login berhasil');
         }
 
         return back()->with('error', 'Email or Password salah');
